@@ -13,6 +13,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "cruise")
+@NamedQuery(name = "findCruiseByShipId", query = "from Cruise cruise where cruise.ship.id =:id")
 public class Cruise implements Serializable {
 
     @Id
